@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.promcteam</groupId>
+        <artifactId>promc-parent</artifactId>
+        <version>1.19.4-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>proskillapi-quests</artifactId>
+    <version>1.0-R0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>ProSkillAPI-QuestsModule</name>
+    <description>A Quests module for ProSkillAPI</description>
+    <url>https://github.com/SparkGNRK/ProSkillAPI-QuestsModule</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.build.timestamp.format>wwuHHmm</maven.build.timestamp.format>
+    </properties>
+
+    <build>
+        <directory>${java.io.tmpdir}/maven-target/</directory>
+        <finalName>SkillAPIModule</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>sonatype</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+        <repository>
+            <id>codemc-repo</id>
+            <url>https://repo.codemc.io/repository/maven-public/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.promcteam</groupId>
+            <artifactId>promccore</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.promcteam</groupId>
+            <artifactId>proskillapi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>24.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>me.blackvein.quests</groupId>
+            <artifactId>quests-api</artifactId>
+            <version>4.8.2</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>SparkGNRK</name>
+            <organization>ProMCTeam</organization>
+            <organizationUrl>https://promcteam.com</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/promcteam/${project.artifactId}.git</connection>
+        <developerConnection>scm:git:ssh://github.com:promcteam/${project.artifactId}.git</developerConnection>
+        <url>https://github.com/promcteam/${project.artifactId}</url>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>${nexus.url}/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>${nexus.url}/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+</project>
