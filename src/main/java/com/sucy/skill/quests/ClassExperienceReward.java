@@ -3,13 +3,14 @@ package com.sucy.skill.quests;
 import com.sucy.skill.SkillAPI;
 import com.sucy.skill.api.enums.ExpSource;
 import com.sucy.skill.api.player.PlayerData;
-import me.blackvein.quests.CustomReward;
-import org.bukkit.OfflinePlayer;
+import me.pikamug.quests.module.BukkitCustomReward;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 import java.util.Map;
+import java.util.UUID;
 
-public class ClassExperienceReward extends CustomReward {
+public class ClassExperienceReward extends BukkitCustomReward {
     private static final String NAME = "Class Experience Reward";
 
     private static final String AUTHOR = "Eniripsa96";
@@ -21,16 +22,19 @@ public class ClassExperienceReward extends CustomReward {
     public ClassExperienceReward() {
         setName("Class Experience Reward");
         setAuthor("Eniripsa96");
-        setRewardName("Experience");
-        addItem("EXP_BOTTLE", (short) 0);
+        setDisplay("Experience");
+        setItem("EXP_BOTTLE", (short) 0);
         addStringPrompt("Experience", "Enter how much experience to give to the player", 0);
     }
 
-    public void giveReward(Player player, Map<String, Object> data) {
+    @Override
+    public void giveReward(UUID id, Map<String, Object> data) {
         try {
-            int experience = Integer.parseInt(data.get("Experience").toString());
-            PlayerData playerSkills = SkillAPI.getPlayerData((OfflinePlayer)player);
+            int        experience   = Integer.parseInt(data.get("Experience").toString());
+            Player     player       = Bukkit.getPlayer(id);
+            PlayerData playerSkills = SkillAPI.getPlayerData(player);
             playerSkills.giveExp(experience, ExpSource.QUEST);
-        } catch (Exception ex) {}
+        } catch (Exception ex) {
+        }
     }
 }

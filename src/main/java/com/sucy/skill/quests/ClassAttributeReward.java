@@ -2,13 +2,14 @@ package com.sucy.skill.quests;
 
 import com.sucy.skill.SkillAPI;
 import com.sucy.skill.api.player.PlayerData;
-import me.blackvein.quests.CustomReward;
-import org.bukkit.OfflinePlayer;
+import me.pikamug.quests.module.BukkitCustomReward;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 import java.util.Map;
+import java.util.UUID;
 
-public class ClassAttributeReward extends CustomReward {
+public class ClassAttributeReward extends BukkitCustomReward {
     private static final String NAME = "Class Attribute Points Reward";
 
     private static final String AUTHOR = "Eniripsa96";
@@ -20,16 +21,19 @@ public class ClassAttributeReward extends CustomReward {
     public ClassAttributeReward() {
         setName("Class Attribute Points Reward");
         setAuthor("Eniripsa96");
-        setRewardName("Attribute Points");
-        addItem("FEATHER", (short) 0);
+        setDisplay("Attribute Points");
+        setItem("FEATHER", (short) 0);
         addStringPrompt("Points", "Enter how many attribute points to give to the player", 0);
     }
 
-    public void giveReward(Player player, Map<String, Object> data) {
+    @Override
+    public void giveReward(UUID id, Map<String, Object> data) {
         try {
-            int points = Integer.parseInt(data.get("Points").toString());
-            PlayerData playerSkills = SkillAPI.getPlayerData((OfflinePlayer)player);
+            int        points       = Integer.parseInt(data.get("Points").toString());
+            Player     player       = Bukkit.getPlayer(id);
+            PlayerData playerSkills = SkillAPI.getPlayerData(player);
             playerSkills.giveAttribPoints(points);
-        } catch (Exception ex) {}
+        } catch (Exception ex) {
+        }
     }
 }
