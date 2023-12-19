@@ -83,9 +83,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>me.blackvein.quests</groupId>
-            <artifactId>quests-api</artifactId>
-            <version>4.8.2</version>
+            <groupId>me.pikamug.quests</groupId>
+            <artifactId>quests-core</artifactId>
+            <version>5.0.0-rc.3</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
