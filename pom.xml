@@ -7,11 +7,11 @@
     <parent>
         <groupId>com.promcteam</groupId>
         <artifactId>promc-parent</artifactId>
-        <version>1.19.4-SNAPSHOT</version>
+        <version>1.20.2-SNAPSHOT</version>
     </parent>
 
     <artifactId>proskillapi-quests</artifactId>
-    <version>1.0-R0.1-SNAPSHOT</version>
+    <version>1.1-R0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>ProSkillAPI-QuestsModule</name>
@@ -83,9 +83,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>me.blackvein.quests</groupId>
-            <artifactId>quests-api</artifactId>
-            <version>4.8.2</version>
+            <groupId>me.pikamug.quests</groupId>
+            <artifactId>quests-core</artifactId>
+            <version>5.0.0-rc.3</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
