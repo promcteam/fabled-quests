@@ -10,13 +10,13 @@
         <version>1.20.4-SNAPSHOT</version>
     </parent>
 
-    <artifactId>proskillapi-quests</artifactId>
-    <version>1.1-R0.1-SNAPSHOT</version>
+    <artifactId>fabled-quests</artifactId>
+    <version>1.0.0-R0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>ProSkillAPI-QuestsModule</name>
-    <description>A Quests module for ProSkillAPI</description>
-    <url>https://github.com/SparkGNRK/ProSkillAPI-QuestsModule</url>
+    <name>Fabled-Quests</name>
+    <description>A Quests module for Fabled</description>
+    <url>https://github.com/promcteam/fabled-quests</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -24,8 +24,7 @@
     </properties>
 
     <build>
-        <directory>${java.io.tmpdir}/maven-target/</directory>
-        <finalName>SkillAPIModule</finalName>
+        <finalName>FabledQuestsModule</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -65,21 +64,17 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
+            <groupId>com.promcteam</groupId>
+            <artifactId>codex</artifactId>
         </dependency>
         <dependency>
             <groupId>com.promcteam</groupId>
-            <artifactId>promccore</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.promcteam</groupId>
-            <artifactId>proskillapi</artifactId>
+            <artifactId>fabled</artifactId>
         </dependency>
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
-            <version>24.0.1</version>
+            <version>24.1.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -93,13 +88,13 @@
     <licenses>
         <license>
             <name>MIT License</name>
-            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <url>https://www.opensource.org/licenses/mit-license.php</url>
         </license>
     </licenses>
 
     <developers>
         <developer>
-            <name>SparkGNRK</name>
+            <name>ProMCTeam</name>
             <organization>ProMCTeam</organization>
             <organizationUrl>https://promcteam.com</organizationUrl>
         </developer>
