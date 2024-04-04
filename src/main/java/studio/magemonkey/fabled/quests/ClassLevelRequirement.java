@@ -1,8 +1,8 @@
-package com.promcteam.fabled.quests;
+package studio.magemonkey.fabled.quests;
 
-import com.promcteam.fabled.Fabled;
-import com.promcteam.fabled.api.player.PlayerClass;
-import com.promcteam.fabled.api.player.PlayerData;
+import studio.magemonkey.fabled.Fabled;
+import studio.magemonkey.fabled.api.player.PlayerClass;
+import studio.magemonkey.fabled.api.player.PlayerData;
 import me.pikamug.quests.module.BukkitCustomRequirement;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -13,7 +13,7 @@ import java.util.UUID;
 public class ClassLevelRequirement extends BukkitCustomRequirement {
     public ClassLevelRequirement() {
         setName("Class Level Requirement");
-        setAuthor("ProMCTeam");
+        setAuthor("Mage Monkey Studios");
         setItem("EXP_BOTTLE", (short) 0);
         addStringPrompt("Level", "The player must be at least the specified level in order to take the quest.", 0);
     }

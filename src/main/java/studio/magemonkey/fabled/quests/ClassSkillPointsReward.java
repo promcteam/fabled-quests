@@ -1,8 +1,8 @@
-package com.promcteam.fabled.quests;
+package studio.magemonkey.fabled.quests;
 
-import com.promcteam.fabled.Fabled;
-import com.promcteam.fabled.api.enums.ExpSource;
-import com.promcteam.fabled.api.player.PlayerData;
+import studio.magemonkey.fabled.Fabled;
+import studio.magemonkey.fabled.api.enums.ExpSource;
+import studio.magemonkey.fabled.api.player.PlayerData;
 import me.pikamug.quests.module.BukkitCustomReward;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -13,7 +13,7 @@ import java.util.UUID;
 public class ClassSkillPointsReward extends BukkitCustomReward {
     public ClassSkillPointsReward() {
         setName("Class Skill Points Reward");
-        setAuthor("ProMCTeam");
+        setAuthor("Mage Monkey Studios");
         setDisplay("Skill Points");
         setItem("ENDER_PEARL", (short) 0);
         addStringPrompt("Points", "Enter how many skill points to give to the player.", 0);

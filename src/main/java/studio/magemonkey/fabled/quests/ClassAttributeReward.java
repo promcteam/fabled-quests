@@ -1,7 +1,7 @@
-package com.promcteam.fabled.quests;
+package studio.magemonkey.fabled.quests;
 
-import com.promcteam.fabled.Fabled;
-import com.promcteam.fabled.api.player.PlayerData;
+import studio.magemonkey.fabled.Fabled;
+import studio.magemonkey.fabled.api.player.PlayerData;
 import me.pikamug.quests.module.BukkitCustomReward;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -12,7 +12,7 @@ import java.util.UUID;
 public class ClassAttributeReward extends BukkitCustomReward {
     private static final String NAME = "Class Attribute Points Reward";
 
-    private static final String AUTHOR = "ProMCTeam";
+    private static final String AUTHOR = "Mage Monkey Studios";
 
     private static final String REWARD_NAME = "Attribute Points";
 
@@ -20,7 +20,7 @@ public class ClassAttributeReward extends BukkitCustomReward {
 
     public ClassAttributeReward() {
         setName("Class Attribute Points Reward");
-        setAuthor("ProMCTeam");
+        setAuthor("Mage Monkey Studios");
         setDisplay("Attribute Points");
         setItem("FEATHER", (short) 0);
         addStringPrompt("Points", "Enter how many attribute points to give to the player", 0);

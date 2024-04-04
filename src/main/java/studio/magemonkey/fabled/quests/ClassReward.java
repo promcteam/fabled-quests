@@ -1,7 +1,7 @@
-package com.promcteam.fabled.quests;
+package studio.magemonkey.fabled.quests;
 
-import com.promcteam.fabled.Fabled;
-import com.promcteam.fabled.api.player.PlayerData;
+import studio.magemonkey.fabled.Fabled;
+import studio.magemonkey.fabled.api.player.PlayerData;
 import me.pikamug.quests.module.BukkitCustomReward;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -12,7 +12,7 @@ import java.util.UUID;
 public class ClassReward extends BukkitCustomReward {
     public ClassReward() {
         setName("Class Reward");
-        setAuthor("ProMCTeam");
+        setAuthor("Mage Monkey Studios");
         setDisplay("Class");
         setItem("CHAINMAIL_HELMET", (short) 0);
         addStringPrompt("Class", "Enter what class the player will become.", 0);

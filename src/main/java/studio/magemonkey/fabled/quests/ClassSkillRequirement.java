@@ -1,8 +1,8 @@
-package com.promcteam.fabled.quests;
+package studio.magemonkey.fabled.quests;
 
-import com.promcteam.fabled.Fabled;
-import com.promcteam.fabled.api.player.PlayerData;
-import com.promcteam.fabled.api.player.PlayerSkill;
+import studio.magemonkey.fabled.Fabled;
+import studio.magemonkey.fabled.api.player.PlayerData;
+import studio.magemonkey.fabled.api.player.PlayerSkill;
 import me.pikamug.quests.module.BukkitCustomRequirement;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -13,7 +13,7 @@ import java.util.UUID;
 public class ClassSkillRequirement extends BukkitCustomRequirement {
     public ClassSkillRequirement() {
         setName("Class Level Requirement");
-        setAuthor("ProMCTeam");
+        setAuthor("Mage Monkey Studios");
         setItem("EYE_OF_ENDER", (short) 0);
         addStringPrompt("Skill", "Enter the name of the required skill.", 0);
         addStringPrompt("Level", "Enter the minimum required level of the skill.", 0);

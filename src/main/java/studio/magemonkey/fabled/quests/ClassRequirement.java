@@ -1,7 +1,7 @@
-package com.promcteam.fabled.quests;
+package studio.magemonkey.fabled.quests;
 
-import com.promcteam.fabled.Fabled;
-import com.promcteam.fabled.api.player.PlayerData;
+import studio.magemonkey.fabled.Fabled;
+import studio.magemonkey.fabled.api.player.PlayerData;
 import me.pikamug.quests.module.BukkitCustomRequirement;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -12,7 +12,7 @@ import java.util.UUID;
 public class ClassRequirement extends BukkitCustomRequirement {
     public ClassRequirement() {
         setName("Class Requirement");
-        setAuthor("ProMCTeam");
+        setAuthor("Mage Monkey Studios");
         setItem("CHAINMAIL_HELMET", (short) 0);
         addStringPrompt("Class",
                 "The player must be the class or a profess of the class in order to take the quest.",
