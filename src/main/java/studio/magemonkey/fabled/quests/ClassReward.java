@@ -1,7 +1,7 @@
-package com.sucy.skill.quests;
+package studio.magemonkey.fabled.quests;
 
-import com.sucy.skill.SkillAPI;
-import com.sucy.skill.api.player.PlayerData;
+import studio.magemonkey.fabled.Fabled;
+import studio.magemonkey.fabled.api.player.PlayerData;
 import me.pikamug.quests.module.BukkitCustomReward;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -12,7 +12,7 @@ import java.util.UUID;
 public class ClassReward extends BukkitCustomReward {
     public ClassReward() {
         setName("Class Reward");
-        setAuthor("Eniripsa96");
+        setAuthor("Mage Monkey Studios");
         setDisplay("Class");
         setItem("CHAINMAIL_HELMET", (short) 0);
         addStringPrompt("Class", "Enter what class the player will become.", 0);
@@ -21,12 +21,12 @@ public class ClassReward extends BukkitCustomReward {
     @Override
     public void giveReward(UUID id, Map<String, Object> data) {
         String c = data.get("Class").toString();
-        if (SkillAPI.getClass(c) == null)
+        if (Fabled.getClass(c) == null)
             return;
         Player     player       = Bukkit.getPlayer(id);
-        PlayerData playerSkills = SkillAPI.getPlayerData(player);
+        PlayerData playerSkills = Fabled.getPlayerData(player);
         if (playerSkills.hasClass() && playerSkills.getMainClass().getData().getName().equalsIgnoreCase(c))
             return;
-        playerSkills.profess(SkillAPI.getClass(c));
+        playerSkills.profess(Fabled.getClass(c));
     }
 }
