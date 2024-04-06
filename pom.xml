@@ -31,24 +31,6 @@
                 <filtering>true</filtering>
             </resource>
         </resources>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.4</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <createDependencyReducedPom>false</createDependencyReducedPom>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
     </build>
 
     <repositories>
@@ -72,49 +54,16 @@
             <artifactId>fabled</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.jetbrains</groupId>
-            <artifactId>annotations</artifactId>
-            <version>24.1.0</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>me.pikamug.quests</groupId>
             <artifactId>quests-core</artifactId>
-            <version>5.0.0-rc.3</version>
+            <version>5.0.1</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
-    <licenses>
-        <license>
-            <name>MIT License</name>
-            <url>https://www.opensource.org/licenses/mit-license.php</url>
-        </license>
-    </licenses>
-
-    <developers>
-        <developer>
-            <name>Mage Monkey Studios</name>
-            <organization>Mage Monkey Studios</organization>
-            <organizationUrl>https://magemonkey.studio</organizationUrl>
-        </developer>
-    </developers>
 
     <scm>
         <connection>scm:git:git://github.com/promcteam/${project.artifactId}.git</connection>
         <developerConnection>scm:git:ssh://github.com:promcteam/${project.artifactId}.git</developerConnection>
         <url>https://github.com/promcteam/${project.artifactId}</url>
     </scm>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>${nexus.url}/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>${nexus.url}/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
-
 </project>
