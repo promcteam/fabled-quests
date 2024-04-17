@@ -13,7 +13,7 @@ import java.util.UUID;
 public class ClassSkillRequirement extends BukkitCustomRequirement {
     public ClassSkillRequirement() {
         setName("Class Level Requirement");
-        setAuthor("Mage Monkey Studios");
+        setAuthor("MageMonkeyStudio");
         setItem("EYE_OF_ENDER", (short) 0);
         addStringPrompt("Skill", "Enter the name of the required skill.", 0);
         addStringPrompt("Level", "Enter the minimum required level of the skill.", 0);

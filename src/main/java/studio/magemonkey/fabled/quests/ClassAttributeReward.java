@@ -12,7 +12,7 @@ import java.util.UUID;
 public class ClassAttributeReward extends BukkitCustomReward {
     private static final String NAME = "Class Attribute Points Reward";
 
-    private static final String AUTHOR = "Mage Monkey Studios";
+    private static final String AUTHOR = "MageMonkeyStudio";
 
     private static final String REWARD_NAME = "Attribute Points";
 
@@ -20,7 +20,7 @@ public class ClassAttributeReward extends BukkitCustomReward {
 
     public ClassAttributeReward() {
         setName("Class Attribute Points Reward");
-        setAuthor("Mage Monkey Studios");
+        setAuthor("MageMonkeyStudio");
         setDisplay("Attribute Points");
         setItem("FEATHER", (short) 0);
         addStringPrompt("Points", "Enter how many attribute points to give to the player", 0);

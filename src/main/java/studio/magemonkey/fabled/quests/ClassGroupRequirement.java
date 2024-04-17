@@ -13,7 +13,7 @@ import java.util.UUID;
 public class ClassGroupRequirement extends BukkitCustomRequirement {
     public ClassGroupRequirement() {
         setName("Class Level Requirement");
-        setAuthor("Mage Monkey Studios");
+        setAuthor("MageMonkeyStudio");
         setItem("CHAINMAIL_HELMET", (short) 0);
         addStringPrompt("Group", "Enter the class group to require the level for", 0);
         addStringPrompt("Level", "Enter the required level for the class group", 0);

@@ -12,7 +12,7 @@ import java.util.UUID;
 public class ClassRequirement extends BukkitCustomRequirement {
     public ClassRequirement() {
         setName("Class Requirement");
-        setAuthor("Mage Monkey Studios");
+        setAuthor("MageMonkeyStudio");
         setItem("CHAINMAIL_HELMET", (short) 0);
         addStringPrompt("Class",
                 "The player must be the class or a profess of the class in order to take the quest.",

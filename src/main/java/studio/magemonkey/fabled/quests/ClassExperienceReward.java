@@ -13,7 +13,7 @@ import java.util.UUID;
 public class ClassExperienceReward extends BukkitCustomReward {
     private static final String NAME = "Class Experience Reward";
 
-    private static final String AUTHOR = "Mage Monkey Studios";
+    private static final String AUTHOR = "MageMonkeyStudio";
 
     private static final String REWARD_NAME = "Experience";
 
@@ -21,7 +21,7 @@ public class ClassExperienceReward extends BukkitCustomReward {
 
     public ClassExperienceReward() {
         setName("Class Experience Reward");
-        setAuthor("Mage Monkey Studios");
+        setAuthor("MageMonkeyStudio");
         setDisplay("Experience");
         setItem("EXP_BOTTLE", (short) 0);
         addStringPrompt("Experience", "Enter how much experience to give to the player", 0);

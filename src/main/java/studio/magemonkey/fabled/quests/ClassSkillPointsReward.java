@@ -13,7 +13,7 @@ import java.util.UUID;
 public class ClassSkillPointsReward extends BukkitCustomReward {
     public ClassSkillPointsReward() {
         setName("Class Skill Points Reward");
-        setAuthor("Mage Monkey Studios");
+        setAuthor("MageMonkeyStudio");
         setDisplay("Skill Points");
         setItem("ENDER_PEARL", (short) 0);
         addStringPrompt("Points", "Enter how many skill points to give to the player.", 0);

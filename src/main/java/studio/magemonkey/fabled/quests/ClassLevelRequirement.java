@@ -13,7 +13,7 @@ import java.util.UUID;
 public class ClassLevelRequirement extends BukkitCustomRequirement {
     public ClassLevelRequirement() {
         setName("Class Level Requirement");
-        setAuthor("Mage Monkey Studios");
+        setAuthor("MageMonkeyStudio");
         setItem("EXP_BOTTLE", (short) 0);
         addStringPrompt("Level", "The player must be at least the specified level in order to take the quest.", 0);
     }
