@@ -25,7 +25,7 @@ public class ClassSkillRequirement extends BukkitCustomRequirement {
             Player      player       = Bukkit.getPlayer(id);
             int         level        = Integer.parseInt(data.get("Level").toString());
             String      skill        = data.get("Skill").toString();
-            PlayerData  playerSkills = Fabled.getPlayerData(player);
+            PlayerData  playerSkills = Fabled.getData(player);
             PlayerSkill skillData    = playerSkills.getSkill(skill);
             return (skillData != null && skillData.getLevel() >= level);
         } catch (Exception ex) {

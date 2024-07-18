@@ -24,7 +24,7 @@ public class ClassReward extends BukkitCustomReward {
         if (Fabled.getClass(c) == null)
             return;
         Player     player       = Bukkit.getPlayer(id);
-        PlayerData playerSkills = Fabled.getPlayerData(player);
+        PlayerData playerSkills = Fabled.getData(player);
         if (playerSkills.hasClass() && playerSkills.getMainClass().getData().getName().equalsIgnoreCase(c))
             return;
         playerSkills.profess(Fabled.getClass(c));

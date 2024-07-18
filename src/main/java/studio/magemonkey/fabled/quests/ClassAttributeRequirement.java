@@ -24,7 +24,7 @@ public class ClassAttributeRequirement extends BukkitCustomRequirement {
             int        amount       = Integer.parseInt(data.get("Amount").toString());
             String     attr         = data.get("Attribute").toString();
             Player     player       = Bukkit.getPlayer(id);
-            PlayerData playerSkills = Fabled.getPlayerData(player);
+            PlayerData playerSkills = Fabled.getData(player);
             return (playerSkills.getAttribute(attr) >= amount);
         } catch (Exception ex) {
             return false;

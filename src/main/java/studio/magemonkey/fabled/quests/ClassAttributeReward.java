@@ -31,7 +31,7 @@ public class ClassAttributeReward extends BukkitCustomReward {
         try {
             int        points       = Integer.parseInt(data.get("Points").toString());
             Player     player       = Bukkit.getPlayer(id);
-            PlayerData playerSkills = Fabled.getPlayerData(player);
+            PlayerData playerSkills = Fabled.getData(player);
             playerSkills.giveAttribPoints(points);
         } catch (Exception ex) {
         }

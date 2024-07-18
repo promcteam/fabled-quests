@@ -24,7 +24,7 @@ public class ClassSkillPointsReward extends BukkitCustomReward {
         try {
             int        points       = Integer.parseInt(data.get("Points").toString());
             Player     player       = Bukkit.getPlayer(id);
-            PlayerData playerSkills = Fabled.getPlayerData(player);
+            PlayerData playerSkills = Fabled.getData(player);
             playerSkills.givePoints(points, ExpSource.QUEST);
         } catch (Exception ex) {
         }

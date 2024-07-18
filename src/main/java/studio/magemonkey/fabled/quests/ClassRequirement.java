@@ -29,7 +29,7 @@ public class ClassRequirement extends BukkitCustomRequirement {
             list = new String[]{c};
         }
         Player     player       = Bukkit.getPlayer(id);
-        PlayerData playerSkills = Fabled.getPlayerData(player);
+        PlayerData playerSkills = Fabled.getData(player);
         for (String item : list) {
             if (playerSkills.isClass(Fabled.getClass(item)))
                 return true;

@@ -25,7 +25,7 @@ public class ClassGroupRequirement extends BukkitCustomRequirement {
             int         level        = Integer.parseInt(data.get("Level").toString());
             String      group        = data.get("Group").toString();
             Player      player       = Bukkit.getPlayer(id);
-            PlayerData  playerSkills = Fabled.getPlayerData(player);
+            PlayerData  playerSkills = Fabled.getData(player);
             PlayerClass c            = playerSkills.getClass(group);
             return (c != null && c.getLevel() >= level);
         } catch (Exception ex) {

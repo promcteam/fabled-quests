@@ -32,7 +32,7 @@ public class ClassExperienceReward extends BukkitCustomReward {
         try {
             int        experience   = Integer.parseInt(data.get("Experience").toString());
             Player     player       = Bukkit.getPlayer(id);
-            PlayerData playerSkills = Fabled.getPlayerData(player);
+            PlayerData playerSkills = Fabled.getData(player);
             playerSkills.giveExp(experience, ExpSource.QUEST);
         } catch (Exception ex) {
         }
