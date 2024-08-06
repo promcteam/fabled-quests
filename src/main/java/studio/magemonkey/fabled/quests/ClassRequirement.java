@@ -1,7 +1,7 @@
-package com.sucy.skill.quests;
+package studio.magemonkey.fabled.quests;
 
-import com.sucy.skill.SkillAPI;
-import com.sucy.skill.api.player.PlayerData;
+import studio.magemonkey.fabled.Fabled;
+import studio.magemonkey.fabled.api.player.PlayerData;
 import me.pikamug.quests.module.BukkitCustomRequirement;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -12,7 +12,7 @@ import java.util.UUID;
 public class ClassRequirement extends BukkitCustomRequirement {
     public ClassRequirement() {
         setName("Class Requirement");
-        setAuthor("Eniripsa96");
+        setAuthor("MageMonkeyStudio");
         setItem("CHAINMAIL_HELMET", (short) 0);
         addStringPrompt("Class",
                 "The player must be the class or a profess of the class in order to take the quest.",
@@ -21,16 +21,17 @@ public class ClassRequirement extends BukkitCustomRequirement {
 
     @Override
     public boolean testRequirement(UUID id, Map<String, Object> data) {
-        String list[], c = data.get("Class").toString();
+        String[] list;
+        String   c = data.get("Class").toString();
         if (c.contains(",")) {
             list = c.split(",");
         } else {
             list = new String[]{c};
         }
         Player     player       = Bukkit.getPlayer(id);
-        PlayerData playerSkills = SkillAPI.getPlayerData(player);
+        PlayerData playerSkills = Fabled.getData(player);
         for (String item : list) {
-            if (playerSkills.isClass(SkillAPI.getClass(item)))
+            if (playerSkills.isClass(Fabled.getClass(item)))
                 return true;
         }
         return false;

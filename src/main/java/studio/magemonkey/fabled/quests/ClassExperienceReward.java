@@ -1,8 +1,8 @@
-package com.sucy.skill.quests;
+package studio.magemonkey.fabled.quests;
 
-import com.sucy.skill.SkillAPI;
-import com.sucy.skill.api.enums.ExpSource;
-import com.sucy.skill.api.player.PlayerData;
+import studio.magemonkey.fabled.Fabled;
+import studio.magemonkey.fabled.api.enums.ExpSource;
+import studio.magemonkey.fabled.api.player.PlayerData;
 import me.pikamug.quests.module.BukkitCustomReward;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -13,7 +13,7 @@ import java.util.UUID;
 public class ClassExperienceReward extends BukkitCustomReward {
     private static final String NAME = "Class Experience Reward";
 
-    private static final String AUTHOR = "Eniripsa96";
+    private static final String AUTHOR = "MageMonkeyStudio";
 
     private static final String REWARD_NAME = "Experience";
 
@@ -21,7 +21,7 @@ public class ClassExperienceReward extends BukkitCustomReward {
 
     public ClassExperienceReward() {
         setName("Class Experience Reward");
-        setAuthor("Eniripsa96");
+        setAuthor("MageMonkeyStudio");
         setDisplay("Experience");
         setItem("EXP_BOTTLE", (short) 0);
         addStringPrompt("Experience", "Enter how much experience to give to the player", 0);
@@ -32,7 +32,7 @@ public class ClassExperienceReward extends BukkitCustomReward {
         try {
             int        experience   = Integer.parseInt(data.get("Experience").toString());
             Player     player       = Bukkit.getPlayer(id);
-            PlayerData playerSkills = SkillAPI.getPlayerData(player);
+            PlayerData playerSkills = Fabled.getData(player);
             playerSkills.giveExp(experience, ExpSource.QUEST);
         } catch (Exception ex) {
         }

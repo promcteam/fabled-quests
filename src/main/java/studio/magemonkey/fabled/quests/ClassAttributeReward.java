@@ -1,7 +1,7 @@
-package com.sucy.skill.quests;
+package studio.magemonkey.fabled.quests;
 
-import com.sucy.skill.SkillAPI;
-import com.sucy.skill.api.player.PlayerData;
+import studio.magemonkey.fabled.Fabled;
+import studio.magemonkey.fabled.api.player.PlayerData;
 import me.pikamug.quests.module.BukkitCustomReward;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -12,7 +12,7 @@ import java.util.UUID;
 public class ClassAttributeReward extends BukkitCustomReward {
     private static final String NAME = "Class Attribute Points Reward";
 
-    private static final String AUTHOR = "Eniripsa96";
+    private static final String AUTHOR = "MageMonkeyStudio";
 
     private static final String REWARD_NAME = "Attribute Points";
 
@@ -20,7 +20,7 @@ public class ClassAttributeReward extends BukkitCustomReward {
 
     public ClassAttributeReward() {
         setName("Class Attribute Points Reward");
-        setAuthor("Eniripsa96");
+        setAuthor("MageMonkeyStudio");
         setDisplay("Attribute Points");
         setItem("FEATHER", (short) 0);
         addStringPrompt("Points", "Enter how many attribute points to give to the player", 0);
@@ -31,7 +31,7 @@ public class ClassAttributeReward extends BukkitCustomReward {
         try {
             int        points       = Integer.parseInt(data.get("Points").toString());
             Player     player       = Bukkit.getPlayer(id);
-            PlayerData playerSkills = SkillAPI.getPlayerData(player);
+            PlayerData playerSkills = Fabled.getData(player);
             playerSkills.giveAttribPoints(points);
         } catch (Exception ex) {
         }
